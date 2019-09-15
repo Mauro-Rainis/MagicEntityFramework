@@ -5,10 +5,10 @@ using WebPageEntityFrameworkMvc.Models;
 
 namespace WebPageEntityFrameworkMvc.Data
 {
-    class MagicContext : DbContext
+    public class MagicContext : DbContext
     {
         private static string _connectionString;
-        public MagicContext() : base()
+        public MagicContext(DbContextOptions<MagicContext> options) : base(options)
         {
 
         }

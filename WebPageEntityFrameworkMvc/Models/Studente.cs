@@ -1,6 +1,6 @@
 ﻿namespace WebPageEntityFrameworkMvc.Models
 {
-    class Studente
+    public class Studente
     {
         public int Id { get; set; }
         public string Nome { get; set; }
