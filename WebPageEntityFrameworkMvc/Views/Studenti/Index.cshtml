@@ -1,0 +1,30 @@
+﻿@model IEnumerable<WebPageEntityFrameworkMvc.Models.Studente>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome studente</th>
+            <th>Sport praticato</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @{ string sport = item.SportPraticato?.Nome ?? "nessuno sport"; }
+                    @Html.DisplayFor(modelItem => sport)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
