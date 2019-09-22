@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 namespace MagiaEF
 {
@@ -9,7 +8,7 @@ namespace MagiaEF
         {
             using (var ctx = new MagicContext())
             {
-                var sport = ctx.Sport.ToList();
+                var sport = ctx.Sport;
                 Console.WriteLine("Elenco sport memorizzati nel db");
                 foreach (var s in sport)
                 {
@@ -18,7 +17,7 @@ namespace MagiaEF
 
                 Console.WriteLine();
 
-                var studenti = ctx.Studenti.ToList();
+                var studenti = ctx.Studenti;
                 Console.WriteLine("Elenco studenti con relativo sport praticato");
                 foreach (var s in studenti)
                 {
